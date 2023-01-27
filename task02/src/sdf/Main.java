@@ -49,25 +49,25 @@ public class Main {
                 switch (inputarray[1]) {
                     case Constant.ADD:
                         result = number1 + number2;
-                        System.out.println(result);
+                        printresult(result);
                         updatelast(result.toString());
                         break;
 
                     case Constant.SUBTRACT:
                         result = number1 - number2;
-                        System.out.println(result);
+                        printresult(result);
                         updatelast(result.toString());
                         break;
 
                     case Constant.DIVIDE:
                         result = number1 / number2;
-                        System.out.println(result);
+                        printresult(result);
                         updatelast(result.toString());
                         break;
 
                     case Constant.MULTIPLY:
                         result = number1 * number2;
-                        System.out.println(result);
+                        printresult(result);
                         updatelast(result.toString());
                         break;
 
@@ -106,6 +106,14 @@ public class Main {
         br.close();
         return last;
 
+    }
+
+    public static void printresult(Float result) {
+        if(Math.floor(result) == result){
+            System.out.println(result.intValue());
+        }else{
+            System.out.println(result);
+        }        
     }
 
 }
